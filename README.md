@@ -260,7 +260,7 @@ npm start
 
 **Fejlesztő**: LiteFox Team  
 **Verzió**: 1.0.0  
-**Utolsó frissítés**: 2024. július
+**Utolsó frissítés**: 2025. Július
 
 ---
 
