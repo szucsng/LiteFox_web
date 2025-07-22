@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 34, 34, 34; /* #222 */
+  --background-start-rgb: 248, 246, 242; /* #f8f6f2 */
+  --background-end-rgb: 255, 255, 255; /* #fff */
+
+  /* Custom color variables - litefox.hu stílus */
+  --primary-50: #fff;
+  --primary-100: #f8f6f2;
+  --primary-200: #f5f5f5;
+  --primary-300: #ececec;
+  --primary-400: #e5e5e5;
+  --primary-500: #bbb;
+  --primary-600: #888;
+  --primary-700: #333;
+  --primary-800: #222;
+  --primary-900: #111;
+
+  --secondary-50: #fff7ed;
+  --secondary-100: #ffe5c2;
+  --secondary-200: #ffd59c;
+  --secondary-300: #fc8f1c; /* narancs */
+  --secondary-400: #e07a13; /* narancs hover */
+  --secondary-500: #fc8f1c;
+  --secondary-600: #e07a13;
+  --secondary-700: #b85e0a;
+  --secondary-800: #8c4505;
+  --secondary-900: #5c2c00;
+
+  --accent-50: #fff;
+  --accent-100: #f8f6f2;
+  --accent-200: #ececec;
+  --accent-300: #fc8f1c;
+  --accent-400: #e07a13;
+  --accent-500: #fc8f1c;
+  --accent-600: #e07a13;
+  --accent-700: #b85e0a;
+  --accent-800: #8c4505;
+  --accent-900: #5c2c00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 34, 34, 34;
+    --background-end-rgb: 24, 24, 24;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    var(--primary-100) 0%,
+    var(--primary-50) 100%
+  );
+}
+
+@layer components {
+  .navbar-gradient {
+    background: #fff;
+    border-bottom: 1.5px solid var(--primary-300);
+  }
+  .navbar-menu-gradient {
+    background: #fff;
+    border-bottom: 1.5px solid var(--primary-300);
+  }
+  .hero-gradient {
+    background: linear-gradient(120deg, var(--primary-100) 0%, var(--primary-50) 100%);
+  }
+  .hero-title-gradient {
+    background: linear-gradient(90deg, var(--secondary-300), var(--secondary-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .logo-container {
+    background: #232323;
+    box-shadow: 0 10px 25px rgba(252, 143, 28, 0.08);
+    border: none;
+  }
+  .logo-container-navbar {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: none;
+  }
+  .btn-primary-gradient {
+    background: linear-gradient(90deg, var(--secondary-300), var(--secondary-400));
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 0.5rem;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-primary-gradient:hover {
+    background: linear-gradient(90deg, var(--secondary-400), var(--secondary-300));
+    filter: brightness(0.97);
+    box-shadow: 0 8px 25px rgba(252, 143, 28, 0.13);
+    transform: translateY(-2px) scale(1.03);
+  }
+  .section-gradient {
+    background: linear-gradient(90deg, var(--primary-100), var(--primary-50) 60%, var(--secondary-50) 100%);
+  }
+  .section-light {
+    background: #fff;
+  }
+  .icon-container-primary {
+    background: var(--primary-200);
+    color: var(--secondary-300);
+  }
+  .icon-container-accent {
+    background: var(--primary-200);
+    color: var(--secondary-300);
+  }
+  .icon-container-secondary {
+    background: var(--primary-200);
+    color: var(--secondary-300);
+  }
+  .card-hover {
+    background: #fff;
+    border: 1.5px solid var(--primary-300);
+    box-shadow: 0 4px 24px 0 rgba(252,143,28,0.06);
+    color: #222;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  .card-hover:hover {
+    box-shadow: 0 8px 32px 0 rgba(252,143,28,0.13);
+    border-color: #fc8f1c;
+    transform: translateY(-4px) scale(1.01);
+  }
+} 
